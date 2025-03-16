@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satın Alma - SOFT HUB</title>
+    <link rel="stylesheet" href="ss2.css">
+</head>
+<body>
+    <div class="purchase-container">
+        <h1>pro Plan</h1>
+        <h2>$60</h2>
+        <h3>SOFT HUB</h3>
+
+        <p class="description">Bu paket, pro özellikler içerir. Ödeme yaptıktan sonra işleminizi doğrulayınız.</p>
+
+        <label for="telegram">Telegram Kullanıcı Adınız:</label>
+        <input type="text" id="telegram" placeholder="@kullaniciadi">
+
+        <h4>Ödeme Yöntemleri</h4>
+        <div class="payment-methods">
+            <div class="payment-method">
+                <strong>BTC:</strong>
+                <p id="btc-address">bc1qm8gwahg78mp4j6g4qazsv3rvh2mjlxhhpgtpc0</p>
+                <button class="copy-btn" onclick="copyToClipboard('btc-address')">Kopyala</button>
+            </div>
+            <div class="payment-method">
+                <strong>BNB (smart chain ):</strong>
+                <p id="bnb-address">0x1CAc2Ce1fc1C10F57ca370CFeDf6F3Ccb4dF417f</p>
+                <button class="copy-btn" onclick="copyToClipboard('bnb-address')">Kopyala</button>
+            </div>
+            <div class="payment-method">
+                <strong>USDT trc20:</strong>
+                <p id="usdt-address">TPnWgd9MiHdCSkkACAQ7z9CmhonSPtDf6C</p>
+                <button class="copy-btn" onclick="copyToClipboard('usdt-address')">Kopyala</button>
+            </div>
+        </div>
+
+        <label for="proof">Ödeme Kanıtı Yükleyin:</label>
+        <input type="file" id="proof">
+
+        <!-- ✅ Uyarılar buraya eklenecek -->
+        <div id="alert-box"></div>
+
+        <button onclick="submitPayment()">Ödemeyi Tamamla</button>
+    </div>
+
+    <script src="ss2.js"></script>
+</body>
+</html>
